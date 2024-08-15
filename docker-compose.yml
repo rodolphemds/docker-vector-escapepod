@@ -1,0 +1,12 @@
+services:
+  escapepod:
+    image: "rodolphemds/escapepod"
+    container_name: escapepod
+    network_mode: "host"
+    hostname: escapepod
+    build:
+      context: ./
+      dockerfile: dockerfile
+    working_dir: /root/wire-pod
+    command: sudo ./chipper/start.sh
+    restart: always
